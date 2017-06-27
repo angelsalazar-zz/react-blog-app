@@ -4,7 +4,8 @@ module.exports = {
   entry: './src/app.js',
   output: {
     filename: 'app.bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath : '/'
   },
   module : {
     rules : [
@@ -31,6 +32,7 @@ module.exports = {
   devServer: {
     hot : true,
     contentBase: path.join(__dirname, "dist"),
+    historyApiFallback : true,
     compress: true,
     port: 8080
   }

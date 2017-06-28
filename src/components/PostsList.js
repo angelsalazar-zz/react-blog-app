@@ -26,6 +26,7 @@ export default class PostsList extends React.Component {
   }
 
   render () {
+    console.log(this.props);
     return (
       <div>
         <div className="text-xs-right">

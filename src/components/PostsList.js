@@ -19,7 +19,7 @@ export default class PostsList extends React.Component {
     return _.map(this.props.posts.posts, (post) => {
       return (
         <li key={post.id} className="list-group-item">
-          {post.title}
+          <Link to={`/posts/${post.id}`}>{post.title}</Link>
         </li>
       );
     });

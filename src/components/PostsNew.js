@@ -46,11 +46,12 @@ export default class PostsNew extends React.Component {
   }
 
   onSubmit (values) {
-    this.props.createPost(values);
+    this.props.createPost(values, () => {
+      this.props.history.push('/');
+    });
   }
 
   render () {
-    console.log(this.props);
     const {handleSubmit} = this.props;
     return (
       <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
